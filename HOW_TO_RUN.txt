@@ -1,0 +1,64 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  ATLAS - HOW TO RUN                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+STEP 1: GET API KEY (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Visit: https://makersuite.google.com/app/apikey
+→ Sign in with Google
+→ Click "Create API Key"  
+→ Copy the key
+
+
+STEP 2: ADD API KEY (1 minute)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+cd atlas
+nano .env
+
+Add this line:
+GEMINI_API_KEY=your-actual-key-here
+
+Save: Ctrl+X, then Y, then Enter
+
+
+STEP 3: START ATLAS (2 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+docker-compose up -d
+
+Wait 15 seconds...
+
+
+STEP 4: OPEN BROWSER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+http://localhost:5173
+
+→ Click "Register"
+→ Create account
+→ Login
+→ Start chatting!
+
+
+THAT'S IT! 🎉
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK COMMANDS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+View logs:        docker-compose logs -f
+Stop ATLAS:       docker-compose down
+Restart:          docker-compose restart
+Reset everything: docker-compose down -v && docker-compose up -d
+
+
+TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Can't connect?    → Check: docker-compose ps
+Backend errors?   → Check: docker-compose logs backend
+Frontend blank?   → Check: docker-compose logs frontend
+Database issues?  → Run: docker-compose down -v && docker-compose up -d
+
+
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Read: START_HERE.md
+Read: QUICKSTART.md
+Read: TROUBLESHOOTING.md

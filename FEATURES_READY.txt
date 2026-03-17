@@ -1,0 +1,46 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║  ✅ NEW FEATURES ADDED!                                  ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+1. ⏹ STOP BUTTON
+   • Appears while agent is generating
+   • Click to stop generation immediately
+   • Red button next to "Agent is thinking..."
+
+2. 📎 IMPROVED PDF UPLOAD
+   • Shows file name and size
+   • Better error messages
+   • Validates file types (PDF, DOCX, TXT only)
+   • Handles corrupted PDFs gracefully
+   • Shows which files succeeded/failed
+
+3. 🎨 CLEAN RESPONSES
+   • No more ** or ### in responses
+   • Markdown formatting removed
+   • Clean, readable text
+
+═══════════════════════════════════════════════════════════
+
+REFRESH YOUR BROWSER:
+
+  http://localhost:5173
+
+═══════════════════════════════════════════════════════════
+
+Test the Stop Button:
+  1. Ask: "Write a 1000 word essay about AI"
+  2. Click "⏹ Stop" button after 2 seconds
+  3. Generation stops immediately
+
+Test PDF Upload:
+  1. Click "📎 Upload" button
+  2. Select a PDF file
+  3. See file name and size displayed
+  4. Send message
+  5. Agent uses PDF content in response
+
+═══════════════════════════════════════════════════════════
+
+Everything is ready! Just refresh your browser.

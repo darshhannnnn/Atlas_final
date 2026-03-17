@@ -1,0 +1,58 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║  ✅ CHAT FEATURES UPDATED!                               ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+NEW FEATURES:
+
+1. 📝 AUTO-GENERATED CHAT NAMES
+   • First message becomes the chat title
+   • Shows first 6 words + "..."
+   • No more "New Conversation" everywhere!
+
+2. 🗑️ DELETE CHAT BUTTON
+   • Hover over any chat in sidebar
+   • Click 🗑️ icon to delete
+   • Confirms before deleting
+   • Removes chat permanently
+
+3. ⏹ STOP GENERATION BUTTON
+   • Red "Stop" button while generating
+   • Stops AI response immediately
+   • Cancels the API request
+
+4. 📎 IMPROVED FILE UPLOAD
+   • Shows file size in KB
+   • Better error messages
+   • Validates file types
+   • Handles PDF errors gracefully
+
+═══════════════════════════════════════════════════════════
+
+HOW TO USE:
+
+Auto-Generated Names:
+  • Create new chat
+  • Send first message: "What is machine learning?"
+  • Chat automatically named: "What is machine learning..."
+
+Delete Chat:
+  • Hover over any chat in sidebar
+  • Click 🗑️ icon that appears
+  • Confirm deletion
+
+Stop Generation:
+  • Send a long query
+  • Click red "⏹ Stop" button
+  • Generation stops immediately
+
+═══════════════════════════════════════════════════════════
+
+REFRESH YOUR BROWSER:
+
+  http://localhost:5173
+
+═══════════════════════════════════════════════════════════
+
+All features are live! Just refresh and test.

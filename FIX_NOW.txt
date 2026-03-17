@@ -1,0 +1,43 @@
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║  ⚠️  BACKEND IS STILL USING OLD GEMINI CODE              ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+
+The error shows:
+  "model: gemini-2.5-flash"
+  "quota exceeded"
+
+This means the backend container is running OLD code.
+
+═══════════════════════════════════════════════════════════
+  SOLUTION: REBUILD THE CONTAINER
+═══════════════════════════════════════════════════════════
+
+COPY AND PASTE THESE COMMANDS:
+
+cd atlas
+docker-compose down
+docker-compose up -d --build
+
+═══════════════════════════════════════════════════════════
+
+What this does:
+  1. Stops all containers
+  2. Rebuilds backend with NEW Mistral code
+  3. Installs mistralai package
+  4. Starts everything fresh
+
+Wait 30 seconds after running, then refresh your browser.
+
+═══════════════════════════════════════════════════════════
+
+Why you're seeing Gemini errors:
+  ✅ You updated the API key in .env files
+  ✅ I updated the code to use Mistral
+  ❌ But Docker is running the OLD container image
+  
+Docker containers don't automatically reload code changes.
+You MUST rebuild to get the new Mistral code.
+
+═══════════════════════════════════════════════════════════
