@@ -1,0 +1,46 @@
+services:
+  # Backend API Service
+  - type: web
+    name: atlas-backend
+    runtime: python
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && ./render-start.sh
+    plan: free
+    env: python
+    region: oregon
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: atlas-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: atlas-redis
+          property: connectionString
+
+  # Frontend Static Site
+  - type: static
+    name: atlas-frontend
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        value: https://atlas-backend.onrender.com/api/v1
+
+databases:
+  - name: atlas-db
+    databaseName: atlas_db
+    user: atlas
+    plan: free
+
+services:
+  - type: redis
+    name: atlas-redis
+    plan: free
+    maxmemoryPolicy: allkeys-lru
