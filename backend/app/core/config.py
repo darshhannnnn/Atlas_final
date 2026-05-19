@@ -4,6 +4,7 @@ import os
 
 
 class Settings(BaseSettings):
+    UPLOAD_DIR: str = "uploads"
     # Database (Vercel Postgres or any PostgreSQL)
     DATABASE_URL: str = os.getenv("DATABASE_URL", "postgresql://atlas:atlas123@localhost:5432/atlas_db")
     

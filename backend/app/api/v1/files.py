@@ -5,6 +5,9 @@ from app.models.user import User
 from app.services.file_service import FileService
 from app.services.vector_service import VectorService
 from app.core.config import settings
+print("SETTINGS OBJECT:", settings)
+print("HAS UPLOAD_DIR:", hasattr(settings, "UPLOAD_DIR"))
+print("UPLOAD_DIR VALUE:", getattr(settings, "UPLOAD_DIR", "NOT FOUND"))
 import logging
 import time
 
